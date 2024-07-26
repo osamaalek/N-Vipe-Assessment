@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mapFragment">
+
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.osamaalek.n_vipeassessment.ui.MapFragment"
+        android:label="Map Fragment"
+        tools:layout="@layout/fragment_map">
+        <argument
+            android:name="sourceAddress"
+            android:defaultValue="@null"
+            app:argType="com.osamaalek.n_vipeassessment.model.Address"
+            app:nullable="true" />
+        <argument
+            android:name="destinationAddress"
+            android:defaultValue="@null"
+            app:argType="com.osamaalek.n_vipeassessment.model.Address"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>
