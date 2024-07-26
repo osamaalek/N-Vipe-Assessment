@@ -1,14 +1,21 @@
 [versions]
 agp = "8.5.0"
 kotlin = "1.9.0"
-coreKtx = "1.13.1"
+coreKtx = "1.10.1"
 junit = "4.13.2"
-junitVersion = "1.2.1"
-espressoCore = "3.6.1"
-appcompat = "1.7.0"
-material = "1.12.0"
-activity = "1.9.1"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+activity = "1.8.0"
 constraintlayout = "2.1.4"
+navigation="2.7.7"
+slidingpanelayout = "1.2.0"
+play-services-map = "19.0.0"
+android-map = "2.3.0"
+places = "3.5.0"
+hilt = "2.51.1"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -19,8 +26,17 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+androidx-slidingpanelayout = { group = "androidx.slidingpanelayout", name = "slidingpanelayout", version.ref = "slidingpanelayout" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "play-services-map" }
+android-map = { group = "com.google.maps.android", name = "android-maps-utils", version.ref = "android-map" }
+places = { group = "com.google.android.libraries.places", name = "places", version.ref = "places" }
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+androidx-navigation-safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }

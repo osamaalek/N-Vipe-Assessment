@@ -1,6 +1,11 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.androidx.navigation.safe.args)
+    alias(libs.plugins.hilt.plugin)
+    id("kotlin-kapt")
 }
 
 android {
@@ -33,6 +38,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+        buildConfig = true
+    }
+    kapt {
+        correctErrorTypes = true
+    }
 }
 
 dependencies {
@@ -42,7 +56,15 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.slidingpanelayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+    implementation(libs.play.services.maps)
+    implementation(libs.android.map)
+    implementation(libs.places)
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
 }
