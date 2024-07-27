@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">N-Vipe Assessment</string>
+    <string name="walking">Walking</string>
+    <string name="please_select_the_destination_address">Please Select the destination address</string>
+    <string name="please_select_the_origin_address">Please Select the origin address</string>
+    <string name="an_error_occurred">An error occurred</string>
+    <string name="search_on_your_origin">Search on your origin</string>
+    <string name="search_on_your_destination">Search on your destination</string>
+    <string name="get_directions">Get Directions</string>
 </resources>

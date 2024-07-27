@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.osamaalek.n_vipeassessment.viewmodel.MapViewModel" />
+
+        <variable
+            name="origin"
+            type="String" />
+
+        <variable
+            name="destination"
+            type="String" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_direction_info"
+        android:backgroundTint="@color/quantum_grey100"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp"
+        android:visibility="@{vm.errorState == null &amp;&amp; !vm.loadingState &amp;&amp; vm.travelTileState.length() == 0 ? View.GONE : View.VISIBLE}">
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:visibility="@{vm.loadingState? View.VISIBLE : View.GONE}"
+            tools:visibility="gone" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_alert"
+            android:visibility="@{vm.errorState != null &amp;&amp; !vm.loadingState? View.VISIBLE : View.GONE}"
+            tools:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="@{vm.errorState != null || vm.loadingState? View.INVISIBLE : View.VISIBLE}">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@{origin}"
+                    tools:text="Aleppo" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="0"
+                    android:src="@drawable/ic_repeat" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@{destination}"
+                    tools:text="Homs" />
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@{vm.travelTileState}"
+                    android:textSize="10sp"
+                    app:drawableStartCompat="@drawable/ic_clock"
+                    tools:text="1 hour and 4 minutes" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/walking"
+                    android:textSize="10sp"
+                    app:drawableStartCompat="@drawable/ic_walk"
+                    tools:text="walking" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>
