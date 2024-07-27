@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.NVipeAssessment" parent="Base.Theme.NVipeAssessment" />
+
+    <style name="CustomPlacesAutocompleteStyle" parent="PlacesAutocompleteBase">
+        <item name="android:background">@drawable/bg_custom_search</item>
+    </style>
 </resources>

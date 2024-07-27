@@ -3,17 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DirectionsFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.DirectionsFragment">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/origin_autocomplete_fragment"
         android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/CustomPlacesAutocompleteStyle"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="32dp"
+        android:theme="@style/CustomPlacesAutocompleteStyle" />
 
 
     <androidx.fragment.app.FragmentContainerView
@@ -21,16 +21,16 @@
         android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/CustomPlacesAutocompleteStyle"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:theme="@style/CustomPlacesAutocompleteStyle" />
 
     <Button
         android:id="@+id/directions_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/get_directions"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="@string/get_directions" />
 
 </LinearLayout>
