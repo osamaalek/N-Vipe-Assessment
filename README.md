@@ -22,7 +22,7 @@ To install This App, follow these steps:
 
 - Clone the repository:
 ```bash
-  git clone https://github.com/yourusername/your-repo-name.git
+  git clone https://github.com/osamaalek/N-Vipe-Assessment.git
 ```
 
 - Navigate to the project directory:
@@ -37,7 +37,7 @@ To install This App, follow these steps:
 
 - Open keys.properties and add the following line:
 ```bash
-  MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
+  GOOGLE_MAP_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
 ```
 
 
