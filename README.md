@@ -2,7 +2,12 @@
 
 ## Demo
 
+For tablets, the map is not displayed on the emulator:
 [![Watch the video](assets/videos/Screen_recording_20240727_011925.webm)](assets/videos/Screen_recording_20240727_011925.webm)
+
+For normal devices:
+[![Watch the video](assets/videos/Screenrecorder-2024-07-27-09-40-41-824.mp4)](assets/videos/Screenrecorder-2024-07-27-09-40-41-824.mp4)
+
 
 ## Prerequisites
 
